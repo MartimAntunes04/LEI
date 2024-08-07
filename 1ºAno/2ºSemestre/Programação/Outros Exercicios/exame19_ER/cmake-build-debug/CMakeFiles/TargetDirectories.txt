@@ -1,0 +1,3 @@
+C:/Users/ASUS/exame19_ER/cmake-build-debug/CMakeFiles/exame19_ER.dir
+C:/Users/ASUS/exame19_ER/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/exame19_ER/cmake-build-debug/CMakeFiles/rebuild_cache.dir
