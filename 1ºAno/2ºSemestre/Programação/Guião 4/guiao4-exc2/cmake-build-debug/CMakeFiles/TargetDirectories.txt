@@ -1,0 +1,3 @@
+C:/Users/ASUS/guiao4-exc2/cmake-build-debug/CMakeFiles/guiao4_exc2.dir
+C:/Users/ASUS/guiao4-exc2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/guiao4-exc2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
