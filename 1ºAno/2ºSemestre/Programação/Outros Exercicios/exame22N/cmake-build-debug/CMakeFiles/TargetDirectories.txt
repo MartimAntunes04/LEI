@@ -1,0 +1,3 @@
+C:/Users/ASUS/exame22N/cmake-build-debug/CMakeFiles/exame22N.dir
+C:/Users/ASUS/exame22N/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/exame22N/cmake-build-debug/CMakeFiles/rebuild_cache.dir
