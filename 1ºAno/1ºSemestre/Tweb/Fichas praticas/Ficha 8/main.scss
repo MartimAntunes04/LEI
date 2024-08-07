@@ -1,0 +1,123 @@
+$text-color: #222222;
+$theme-color: #170a48;
+$secondary-color: #f27731;
+$ternary-color: #ccf962;
+$menu-item-color: white;
+$link-color: $secondary-color;
+$text-font: 'Open Sans', sans-serif;
+$headline-font: Georgia, serif;
+$content-width:940px;
+$header-height:60px;
+$footer-height:60px;
+$global-border-radius:5px;
+@mixin codereuse {$color:orange
+
+    
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+h1,h2, h3, h4 { font-family: $headline-font;
+}
+
+p {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+a {color: $link-color;
+
+}
+
+
+    
+
+    header {
+
+        #main-menu {
+         a{
+            color: $menu-item-colorx;
+            text-decoration: none; }
+            
+        a:hover{
+            text-decoration: underline;
+            text-decoration: white;
+            
+            text-decoration-thickness: 2px;
+        }
+        }
+    ul{
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        @media(min-width: 525px;){
+            flex-direction: row;
+        }
+    }
+    }
+
+    
+    .wrapper{
+        min-width: $content-width;
+        margin-left: auto;
+       margin-right: auto;
+       display: grid;
+       gap: 10px;
+       @media (min-width:525px){
+        grid-template-columns: 4fr 1fr;
+       }
+       
+
+
+
+
+    }
+    #header{
+        min-width: $header-height;
+        background-color: $theme-color;
+        border-radius: $global-border-radius;
+
+
+    }  
+    
+    
+    #content {
+    }
+
+    #sidebar {
+    ul{
+        padding: 0;
+        list-style: none;
+        flex-direction: row;
+    }
+    li{
+        padding: 5px 0;
+        border-bottom: 1px dashed #ddd;
+        flex-direction: row;
+
+    }
+    }
+
+    footer {
+        height: $footer-height;
+        border-radius: $global-border-radius;
+
+
+    }
+.code-button{
+  @include codereuse()
+    padding: 8px;
+    border-radius: $global-border-radius;
+}
+
+#content{
+    @media(min-width: 525px);
+   grid-column-start: 1;
+   grid-column-end: 2;
+
+}

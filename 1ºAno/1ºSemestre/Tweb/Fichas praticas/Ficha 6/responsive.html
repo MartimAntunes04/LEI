@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title></title>
+        <style>
+	  body{
+        font-family: verdana;
+        margin: 0px;
+        padding: 0px;
+    }
+    #global{
+        color: white;
+        background-color: #505160BB;
+        padding: 0.8em;
+    }
+      
+     #curso{
+        background-color: #68829E;
+        padding: 1em;
+        border-radius: 1em;
+     }
+     
+     #curso h2{
+        font-weight:100;
+        padding:0;
+        margin: 0;
+
+     }
+     #curso label{
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 0.8em;
+        display: block;
+     }
+
+     #curso input{
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: 200;
+        padding: 0.8em;
+        border: 0.8em solid white;
+    }
+
+    #teste{
+        background-color: #AEBD38BB;
+        color: white;
+        margin-top: 1.5em;
+        padding: 0.8em;
+        font-size: 1.5em;
+    }
+
+    #rodape{
+        background-color: #505160BB;
+        text-size-adjust: 1.4em;
+        text-align: center;
+        color:white;
+        margin-top: 1.5em;
+        padding: 0.8em;
+    }
+    
+    
+    
+    @media (min-width: 600px){
+        .conteudo{
+            width: 50%;
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: auto;
+        }  
+        #principios{
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        font-size: 18px;
+        font-weight: 200;
+    }
+
+       #curso{
+       float: right;
+       width: 50%;
+       padding: 20px;
+       background-color:#AEBD38BB ;
+}
+
+}
+#global::after{
+content: "";
+display: block;
+clear: both;
+}
+
+
+@media (min-width: 600px){
+    #curso{
+        background-color: #AEBD38BB;
+    }
+    #teste{
+        background-color: #68829E;
+    }
+    
+}
+
+
+    
+  
+    
+
+
+
+          
+        </style>
+    </head>
+    <body>
+                
+        <div id="global">		
+            <div class="conteudo">
+
+                <h1> Responsive Design </h1>
+                <p> Principais regras a seguir para implementar um responsive design </p>
+
+
+                <div id="principios">
+                    <p> O responsive design deve ser implementado para optimizar a visualização do 
+                        conteúdo em dispositivos de diferentes dimensões (smartphones, tables, phablets, portáteis). O RD deve prever:</p>
+                    <ul>
+                        <li>fluid layout </li>
+                        <li>imagens flexíveis</li>
+                        <li>CSS media queries</li>
+                    </ul>
+                </div>
+                
+       
+                
+                <form method="post" id="curso">
+
+                    <h2>Inscrição no curso</h2>
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Francisco Ferro" required="required"/>
+
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" id="email" placeholder="ferro@example.com"/>
+
+                    <label for="tel">Telephone</label>
+                    <input type="tel" name="tel" id="tel" placeholder="(555) 555 5555" required="required"/>
+
+                    <input type="submit" value="Sign up" id="teste">
+                </form>
+                <br/>
+
+            </div>
+        </div>
+
+        <div id="rodape">
+            <p>Footer</p>
+        </div>
+
+    </body>
+</html>
