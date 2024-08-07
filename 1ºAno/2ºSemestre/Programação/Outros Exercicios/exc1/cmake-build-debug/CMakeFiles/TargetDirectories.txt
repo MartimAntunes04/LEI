@@ -1,0 +1,3 @@
+C:/Users/ASUS/exc1/cmake-build-debug/CMakeFiles/exc1.dir
+C:/Users/ASUS/exc1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/exc1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
