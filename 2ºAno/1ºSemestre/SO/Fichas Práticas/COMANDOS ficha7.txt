@@ -1,0 +1,142 @@
+COMANDOS
+
+encontrar -  grep
+^  - primeira letra
+ex: cat xpto.c | grep ^v
+
+MOSTRAR SO COLUNAS 5 E 9 -  ls -l /etc/ | tr -s " " | cut -d " " -f5,9
+
+
+CONTAR QUANTOS FICHEIROS COMECOS COM S -   ls -l /etc/ | tr -s " " | cut -d " " -f9 | grep ^s | wc -l
+
+FICHERIOS QUE ACABEM COM LETRA C  ls | grep c$
+
+ FICHEIROS QUE O PRIMEIROS CARACTER QUALQUER E OS OUTRO xpto     ls | grep ^.pto
+
+ORDENAR COLUNAS -  ls -l /etc/ | tr -s " "
+
+ORDENAR  ls -l /etc/ | tr -s " " sort -n -k 5 -r
+
+
+QUANTOS USERS DIFENTES EXISTEM   who | cut -d " " -f1 | sort -u | wc -l
+
+MOSTRAR OS 5 PRIMEIROS FICHERIOS  ls -l /etc/ | head -6 | tail -5
+
+QUANTOS UTILZIADORES who | wc -l
+
+
+Apresente no ecrã o número de utilizadores logados na máquina, sem repetição de utilizadores.
+who | tr -s | cut -d " " -f1 | sort -u | wc -l
+
+Apresente o número de vezes que o utilizador com username "manuel" está logado na máquina (use
+outro username se não existir nenhum "manuel").
+who | cut -d " " -f 1 | grep ^martim
+
+
+Numero de vezes que o utilzador aparece
+who | cut -d " " -f 1 | grep ^martim | wc -l
+
+Apresente no ecrã o número de ficheiros ou directorias que existem na directoria /tmp
+ls -l /etc  | grep ^[-d] | wc -l
+
+
+
+Apresente no ecrã o número de ficheiros executáveis que existem na directoria /bin.
+ls -l /etc/ cut -d " " -f 1 | grep x | wc -l
+
+
+Apresente no ecrã o número de dispositivos de bloco ou de caracter e apenas esses que existem na
+directoria /dev.
+ls -l /dev/ | grep ^[bc] | wc -l
+
+
+Apresente no ecrã o número de dispositivos SATA que existem na sua máquina.
+ ls -l /dev/ | grep ^sd | cut -c 1-3 | sort -u | wc -l
+
+
+Apresente no ecrã o número de ficheiros em /etc cujo nome contém "gnome"
+ls /etc/ | grep gnome | wc -l
+
+
+Escreva no ficheiro conta o número ficheiros regulares em /etc" que tenham exactamente as
+permissões: dono pode ler e escrever, mas não executar. O grupo pode ler apenas, e os restantes
+utilizadores não podem fazer nada.
+ls -l /etc/ | grep ^-rw-r-----  | wc -l
+
+
+
+Crie um ficheiro na sua directoria pessoal chamado "ficheiro". O ficheiro deve ter na primeira linha
+"exemplo" e na segunda "etc". Não pode usar nenhum editor de texto para criar o ficheiro nem para
+colocar lá o conteúdo.
+echo -e "exemplo \n etc" > -/ficheiro
+
+
+Mude as permissões do ficheiro "ficheiro.txt" para que o utilizador possa ver e escrever (mas não
+executar), grupo possa ler apenas, e os restantes utilizadores não possam fazer nada.
+
+
+
+Crie um ficheiro na directoria temporária do sistema com a lista de ficheiros existente na sua directoria
+pessoal que comecem por ".p" (evidentemente, não pode usar um editor de texto).
+ls ~ | grep ^p
+
+
+Apresente no ecrã o tamanho dos 7 maiores ficheiros existentes em /bin
+ ls -l /bin/ | tr -s " " | cut -d " " -f 5,9 | sort -k 1 -n -r | head -n 7 | tail -n 6
+
+
+Apresente no ecrã o nome da directoria pessoal dos utilizadores cujo nome comece por uma vogal
+ls /home | grep ^[aeiouAEIOU]
+
+
+
+Apresente apenas o username e user ID dos utilizadores existentes no sistema.
+cat /etc/passwd | cut -d ":" -f 1,6 | tr -s ":" " "
+
+
+Repita o exercício anterior, mas coloque o resultado por ordem alfabética de username. 
+
+
+
+Repita o exercício anterior, mas desta vez o resultado é por ordem numérica decrescente de user ID.
+ cat /etc/passwd | cut -d ":" -f 1,6 | tr -s ":" " " | sort -k  1 -r
+
+
+Escreva no ecrã a mensagem "estás a usar XXXX. Muito bem", em que XXX é o nome do sistema, o qual
+deve ser descoberto automaticamente (exactamente = não é para escrever o nome de forma fixa no
+comando).
+echo "o nome do sistema e $HOSTNAME"
+
+
+Apresente o número de ficheiros que existem na directoria do utilizador cujo username é XXX (é para
+substituir XXX por vários usernames, um de cada vez. Pode começar pelo seu próprio username).
+
+
+
+Indique o número total de ficheiros executáveis com o bit SetUID ligado que existem na directorias
+/sbin e /bin.
+ls -l /sbin/ /bin/ | cut -d " " -f1 | grep s | wc -l
+
+
+Indique o número de ficheiros com pelo menos 1000 bytes existentes na sua directoria pessoal. O
+comando deve funcionar a partir de qualquer local onde se encontre e não pode especificar
+directamente o nome da sua directoria pessoal.
+
+
+
+
+Apresente o nome do 2º, 3º, e 4º ficheiros da sua directoria pessoal, considerando a ordem alfabética do seu nome.
+ls ~ | sort | head -n 4 | tail -n 3
+
+
+Apresente o tamanho do 10º ao 15º ficheiros executáveis existentes na directoria /bin
+ ls ~ /bin/ | tr -s " " | sort -n -k 5 | cut -d " " -
+f 1,5 | grep x | head -n 15 | tail -n 5
+
+. Apresente o nome e comprimento de todos os ficheiros em /etc excepto os primeiros 5.
+ls -l /etc/ tr -s " " | cut -d " " -f 5,9 | tail -n +5
+
+
+AS PASS DO USERS ESTA NO SHADOW
+
+
